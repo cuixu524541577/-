@@ -1,0 +1,30 @@
+my_app/
+├── app/
+│   ├── __init__.py
+│   ├── controllers/
+│   │   └── __init__.py
+│   ├── models/
+│   │   └── __init__.py
+│   ├── views/
+│   │   └── __init__.py
+│   └── utils/
+│       └── __init__.py
+├── assets/
+│   ├── audio/          # 音效库目录
+│   ├── luts/           # LUT库目录
+│   ├── samples/        # 样片下载目录
+│   ├── templates/      # 剪辑软件模板目录
+│   │   └── ae/         # AE模版存储目录
+│   └── videos/         # 视频素材目录
+├── projects/           # 工程目录
+├── config/
+│   ├── backups/        # 配置备份目录
+│   │   └── settings_backup_20250223_005146.json
+│   ├── config.json
+│   └── workflow_settings.json
+├── database/
+│   ├── app.db
+│   └── schema.sql
+├── requirements.txt
+├── main.py
+└── README.md 

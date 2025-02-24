@@ -1,0 +1,9 @@
+{
+  "app": {
+    "title": "流影工坊",
+    "theme_mode": "dark"
+  },
+  "database": {
+    "path": "database/app.db"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "project_path": "D:\\测试路径\\工程",
+  "editing_templates_path": "D:\\测试路径\\模板",
+  "folder_language": "english",
+  "folder_structures": {
+    "simple": [
+      "01_Camera",
+      "02_File",
+      "03_Project",
+      "04_Export"
+    ],
+    "standard": [
+      "01_Camera",
+      "02_File",
+      "03_Proxy",
+      "04_Project",
+      "05_Audio",
+      "06_VFX",
+      "07_SFX",
+      "08_IMG",
+      "09_Script",
+      "10_Export",
+      "11_Handover"
+    ],
+    "large": []
+  },
+  "folder_names": {
+    "english": {
+      "01_Camera": "01_Camera",
+      "02_File": "02_File",
+      "03_Proxy": "03_Proxy",
+      "04_Project": "04_Project",
+      "05_Audio": "05_Audio",
+      "06_VFX": "06_VFX",
+      "07_SFX": "07_SFX",
+      "08_IMG": "08_IMG",
+      "09_Script": "09_Script",
+      "10_Export": "10_Export",
+      "11_Handover": "11_Handover"
+    },
+    "chinese": {
+      "01_Camera": "01_相机",
+      "02_File": "02_文件",
+      "03_Proxy": "03_代理",
+      "04_Project": "04_工程",
+      "05_Audio": "05_音频",
+      "06_VFX": "06_VFX",
+      "07_SFX": "07_音效",
+      "08_IMG": "08_图片",
+      "09_Script": "09_脚本",
+      "10_Export": "10_输出",
+      "11_Handover": "11_交接"
+    }
+  },
+  "theme_mode": "dark",
+  "ae_templates_path": "D:\\测试路径\\AE",
+  "video_assets_path": "D:\\测试路径\\视频",
+  "audio_assets_path": "D:\\测试路径\\音效",
+  "lut_path": "D:\\测试路径\\lut",
+  "sample_download_path": "D:\\测试路径\\下载",
+  "database_path": "D:\\测试路径\\数据库"
+}
