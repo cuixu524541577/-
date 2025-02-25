@@ -69,7 +69,7 @@ class AboutView:
                             ft.Text("感谢", size=20, weight=ft.FontWeight.BOLD),
                             ft.Text("特别感谢以下开源项目："),
                             ft.Text("• Flet - 现代化的 Flutter 框架"),
-                            ft.Text("• Cursor And Claude 3.5 大模型"),
+                            ft.Text("• DeepSeek R1、Claude 3.5 大模型 And Cursor"),
                             ft.Text("• Python - 编程语言"),
                             ft.Text("感谢所有开源代码贡献者的支持！"),
                         ]),
