@@ -139,7 +139,7 @@ class MainController:
                 AudioAssetsView(self.page, self.db),
                 LUTView(self.page, self.db),
                 SampleDownloadView(self.page, self.db),
-                HistoryView(self.page, self.db),
+                HistoryView(self.page, self.settings),
                 SettingsView(self.page, self.db),
             ]
             

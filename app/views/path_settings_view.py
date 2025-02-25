@@ -68,31 +68,35 @@ class PathSettingsView:
         def get_result(e):
             if e.path:
                 try:
+                    print(f"[DEBUG] 选择路径: {e.path} (is_database={is_database})")
+                    
                     if is_database:
-                        # 检查数据库目录
+                        # 数据库目录处理
                         db_dir = e.path
                         db_file = os.path.join(db_dir, "app.db")
                         
-                        if os.path.exists(db_file):
-                            # 如果数据库文件存在，验证其有效性
-                            if self.validate_database(db_file):
-                                self.settings[setting_key] = db_dir
-                                self.path_fields[setting_key].value = db_dir
-                                self.save_settings()
-                                self.page.update()
-                            else:
-                                self.show_error("现有数据库文件无效，将创建新数据库")
-                                self.create_database(db_file)
-                        else:
-                            # 如果数据库文件不存在，创建新的数据库
-                            self.create_database(db_file)
+                        # 确保目录存在
+                        os.makedirs(db_dir, exist_ok=True)
+                        
+                        # 更新设置
+                        self.settings[setting_key] = db_dir
+                        self.path_fields[setting_key].value = db_dir
+                        
+                        print(f"[DEBUG] 数据库路径已更新: {db_dir}")
+                        self.show_success("数据库路径已更新")
+                        
                     else:
                         # 普通文件夹处理
                         self.settings[setting_key] = e.path
                         self.path_fields[setting_key].value = e.path
-                        self.save_settings()
-                        self.page.update()
+                        self.show_success("路径已更新")
+                    
+                    # 保存设置
+                    self.save_settings()
+                    self.page.update()
+                    
                 except Exception as ex:
+                    print(f"[ERROR] 设置路径失败: {str(ex)}")
                     self.show_error(f"设置路径失败：{str(ex)}")
         
         file_picker = ft.FilePicker(

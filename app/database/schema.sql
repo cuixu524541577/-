@@ -71,4 +71,32 @@ CREATE TABLE IF NOT EXISTS camera_models (
     UNIQUE(brand_id, name)
 );
 
+-- 历史工程相关表
+CREATE TABLE IF NOT EXISTS projects (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    disk_id TEXT NOT NULL,
+    project_date TEXT NOT NULL,
+    project_name TEXT NOT NULL,
+    backup_status INTEGER DEFAULT 0,
+    notes TEXT,
+    project_path TEXT NOT NULL,
+    filename TEXT NOT NULL,
+    created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+    updated_at TEXT DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS project_tags (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL UNIQUE,
+    color TEXT DEFAULT '#FFFFFF'
+);
+
+CREATE TABLE IF NOT EXISTS project_tag_relations (
+    project_id INTEGER,
+    tag_id INTEGER,
+    FOREIGN KEY (project_id) REFERENCES projects (id) ON DELETE CASCADE,
+    FOREIGN KEY (tag_id) REFERENCES project_tags (id) ON DELETE CASCADE,
+    PRIMARY KEY (project_id, tag_id)
+);
+
 -- 可以添加更多表结构... 

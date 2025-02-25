@@ -80,6 +80,7 @@ class CameraManagerView:
                     content=ft.Column([
                         # 品牌区域
                         self._build_brand_section(),
+
                         
                         # 型号区域
                         self._build_model_section(),
@@ -113,6 +114,7 @@ class CameraManagerView:
             ft.Dropdown(
                 label="选择品牌（重命名后请重选品牌）：",
                 width=400,  # 固定宽度
+                border_color="blue",  # 设置边框颜色为蓝色
                 options=dropdown_options,  # 设置选项
                 value=str(self.current_brand_id) if self.current_brand_id else None,  # 设置当前值
                 on_change=self._handle_brand_change,
