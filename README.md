@@ -3,64 +3,34 @@
 ## 项目简介
 流影工坊是一个专业的媒体资产管理工具，用于管理和组织视频、音频、AE模板、LUT等多种媒体资源。
 
-## 主要功能
+## 项目进度
+目前开发了
+  -设置界面（包含设置的子界面）
+  -历史工程界面
+  *LUT管理界面（开发中）
+  *音效管理界面（开发中）
+  *视频管理界面（开发中）
+  *AE模板管理界面（开发中）
+  *拷卡校验界面（开发中）
+  *工作流文件夹创建界面（开发中）
 
-### 1. 资产管理
-- **AE模板管理**：管理和组织After Effects模板
-- **视频素材管理**：管理各类视频素材
-- **音效素材管理**：管理音频和音效文件
-- **LUT管理**：管理调色查找表(LUT)文件
 
-### 2. 资产设置
-每种资产类型都支持以下设置：
-- 分类管理
-- 标签系统
-- 评分系统
-- 颜色标记
-
-### 3. 工作流管理
-- 项目文件夹模板
-- 相机品牌和型号管理
-- 路径设置
-- 备份管理
 
 ## 技术栈
 - Python 3.x
 - Flet (UI框架)
 - SQLite (数据存储)
 
-## 项目结构 
-lxgf/
-├── app/
-│ ├── controllers/
-│ ├── database/
-│ ├── utils/
-│ └── views/
-├── assets/
-├── config/
-└── main.py
-
-## 数据库设计
-主要包含以下数据表：
-- asset_types (资产类型)
-- categories (分类)
-- tags (标签)
-- color_marks (颜色标记)
-- rating_settings (评分设置)
-- camera_brands (相机品牌)
-- camera_models (相机型号)
-- folder_templates (文件夹模板)
-
-## 开发说明
 
 ### 环境要求
 - Python 3.8+
 - flet
 - sqlite3
+- pandas
 
 ### 安装依赖
 ```bash
-pip install flet sqlite3
+pip install flet sqlite3 pandas
 ```
 
 ### 运行项目
@@ -68,19 +38,9 @@ pip install flet sqlite3
 python main.py
 ```
 
-### 项目结构说明
-- app/：主应用目录
-
-
-### 配置说明
-项目配置文件位于 `config/workflow_settings.json`，包含：
-- 数据库路径
-- 项目路径
-- 模板路径
-- 主题设置
 
 ## 特性
-- 跨平台支持 (Windows, macOS, Linux)
+- 跨平台支持 (Windows, macOS)
 - 中文界面
 - 深色/浅色主题
 - 响应式布局
